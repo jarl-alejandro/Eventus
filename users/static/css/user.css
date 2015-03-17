@@ -1,0 +1,21 @@
+html{
+	font-size: 16px;
+}
+
+body{
+	background: #009688;
+}
+
+.MensajeLogin-h2{
+	font-size: 48px;
+	text-shadow: 5px 5px 10px #9B9B9B;
+	margin-top:  -3px;
+}
+
+.MensajeRegistar-h3{
+	font-size: 14px;
+}
+
+.passwordLogin{
+	margin-top: -3px 
+}

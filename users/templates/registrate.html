@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<section class="container z-depth-1 grey lighten-4">
+		<div class="row center-xs">
+			<div class="col-xs-6">
+				<div class="box">
+				</div>
+				<h2 class="MensajeLogin-h2">Crea una cuenta :)</h2>
+				<form method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					<table>
+						{{ form.as_table }}
+					</table>
+					<button class="btn waves-effect waves-light" type="submit">
+						Registrate
+						<i class="mdi-content-send right"></i>
+					</button>
+				</form>
+				<h3 class="MensajeRegistar-h3">
+					Si ya estas registrado entra 
+					<a href="{% url 'login' %}">aqui</a>
+				</h3>
+			</div>
+		</div>
+	</section>	
+{% endblock content %}
