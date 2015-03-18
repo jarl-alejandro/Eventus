@@ -1,0 +1,18 @@
+{% extends "base_events.html" %}
+
+{% block content %}
+	<section class="container blanco CardCrear">
+		<div class="CrearEventoMensaje">
+			<h2 class="CrearEventoMensaje-h2 centrar">
+				Crea tu evento :)
+			</h2>
+		</div>		
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
+			<button class="btn waves-effect waves-light">Crear Evento</button>
+		</form>
+	</section>
+{% endblock content %}

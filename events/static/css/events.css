@@ -1,3 +1,7 @@
+body{
+	background: #eeeeee;
+}
+
 .avatar{
 	width: 50px;
 	height: 50px;
@@ -10,4 +14,54 @@
 
 .eventus{
 	width: 15em;
+}
+
+.CardEvent{
+	margin: 1em 3em 0 5em;
+	position: relative;
+	left: 6em;
+}
+
+.CardEventTitle{
+	font-size: 20px;
+	text-align: center;
+}
+
+.CardEventoDetalle{
+	border-top: 1px solid #757575 ;
+
+}
+
+.CardEventoCreador, .CardEventoCiudad{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.CardEventoCiudad{
+	float: right;
+}
+
+.btn-right{
+	float: right;
+	margin-right: 1em;
+}
+
+.blanco{
+	background: white;
+}
+
+.CardCrear{
+	padding: 1em;
+}
+
+.centrar{
+	text-align: center;
+}
+
+.link{
+	color: black;
+}
+
+.rojo-darken{
+	color: #c62828;
 }

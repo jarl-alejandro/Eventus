@@ -1,23 +1,29 @@
 {% extends "base_events.html" %}
 
 {% block content %}
-	<header class="Header red darken-1 red lighten-3">
-		<nav class="HeaderMenu nav-wrapper">
-			<a href="#" class="brand-logo grey darken-4 eventus">Eventus</a>
-			<ul class="right">
-				<li><a href="#">Crear Evento</a></li>
-				<li><a href="#">Inicio</a></li>
-				<li>
-					<a class="salir mdi-action-exit-to-app" href="{% url 'logout' %}">
-					</a>
-				</li>
-				<li>
-					<img class="circle avatar" src="{{ user.avatar.url }}" />
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-	Welcome {{ user }}
-	
+	<section class="row">
+		{% for evento in eventos %}
+		    <a href="{% url 'detail' evento.slug %}" class="card col s5 CardEvent blanco link">
+		    	<article class="">
+			    	<h3 class="CardEventTitle rojo-darken">
+			    		{{ evento.titulo }}
+			    	</h3>
+			    	<p class="CardEventoDescripcion">
+			    		{{ evento.descripcion }}
+			    	</p>
+			    	<div class="CardEventoDetalle">
+			    		<p class="CardEventoCreador">
+			    			{{ evento.creador }}
+			    		</p>
+			    		<p class="CardEventoCiudad">
+			    			{{ evento.lugar }}
+			    		</p>
+			    	</div>
+				</article>
+		    </a>
+	    {% endfor %}
+	</section>
+	<a href="{% url 'crear' %}" class="btn-floating btn-right btn-large waves-effect waves-light red">
+			<i class="mdi-content-add"></i>
+		</a>
 {% endblock content %}
