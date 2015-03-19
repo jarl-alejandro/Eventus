@@ -4,8 +4,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 from .forms import UserCreationForm, EmailAuthenticationForm
+from events.mixins import LoginRequired
+
+class ProfileView(LoginRequired, TemplateView):
+	template_name = "profile.html"
 
 def log_in(request):
 	if request.method == "POST":

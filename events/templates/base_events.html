@@ -21,13 +21,18 @@
 					</a>
 				</li>
 				<li>
-					<img class="circle avatar" src="{{ user.avatar.url }}" />
+					<a href="{% url 'profile' %}">
+						<img class="circle avatar" src="{{ user.avatar.url }}" />
+					</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 	{% block content %}
 	{% endblock content %}
+	<a href="{% url 'crear' %}" class="btn-floating btn-height btn-right btn-large waves-effect waves-light red">
+			<i class="mdi-content-add"></i>
+		</a>
 	<script src="{% static 'js/jquery.js' %}"></script>
 	<script src="{% static 'js/materialize.js' %}"></script>
 </body>

@@ -23,3 +23,11 @@ class Evento(models.Model):
 		return "<img src='%s' width='100' />" % self.foto.url
 
 	photo.allow_tags = True
+
+class Comentar(models.Model):
+	evento = models.ForeignKey(Evento)
+	user = models.ForeignKey(User)
+	comentario = models.CharField(max_length = 140)
+
+	def __unicode__(self):
+		return self.comentario

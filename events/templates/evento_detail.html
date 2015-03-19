@@ -1,5 +1,47 @@
 {% extends "base_events.html" %}
 
 {% block content %}
-	{{ evento.titulo }}
+	<section class="row">
+		<article class="card col-xs-8 tarjeta arriba">
+			<figure class="card-image foto">
+				<img class="TarjetaFoto" src="{{ evento.foto.url }}" width="800" alt="{{ evento.titulo }}">
+				<figcaption class="tag">
+					<h2>
+						{{ evento.titulo }}
+					</h2>
+				</figcaption>
+			</figure>
+			<div class="Descripcion">
+				<p class="Descripcion-p">
+					{{ evento.descripcion }}
+				</p>
+			</div>
+		</article>
+		<aside class="card col-xs-3 arriba LugarFecha">
+			<h4 class="blue col-xs-12 LugarFechaTitle">Lugar y Fecha</h4>
+			<div class="LugarFechaInformacion">
+				<h6>Lugar: {{ evento.lugar }} </h6>
+				<h6>Fecha: {{ evento.fecha }} </h6>
+			</div>
+		</aside>
+		<aside class="card arriba CreadorEvento col-xs-3">
+			<h4 class="CreadorEvento-h4 blue col-xs-12">
+				Creador
+			</h4>
+			<figure class="CreadorFigure">
+				<img class="CreadorEvento-img" src="{{ evento.creador.avatar.url }}" alt="{{ evento.creador }}">
+				<figcaption class="CreadorEventoFig" >
+					<p class="CreadorEventoP">{{ evento.creador }}</p>
+					<p class="CreadorEventoP">{{ evento.creador.nombre }}</p>
+					<p class="CreadorEventoP">{{ evento.creador.ciudad }}</p>
+				</figcaption>
+			</figure>
+		</aside>
+	</section>
+	<section class="Comentarios card col-xs-8">
+		<article class="Comentario">
+			<input type="text" class="col-xs-9 pregunta" placeholder="Comenta que te parece este taller :)" />
+			<button class="btn waves-effect waves-light btn-pregunta col-xs-3">Comentar</button>
+		</article>
+	</section>
 {% endblock content %}

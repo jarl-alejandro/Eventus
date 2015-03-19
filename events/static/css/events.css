@@ -8,6 +8,11 @@ body{
 	margin-top: 6px;
 }
 
+.TarjetaFoto{
+	width: 857px;
+	height: 482px;
+}
+
 .salir{
 	font-size: 21px;
 }
@@ -42,8 +47,13 @@ body{
 }
 
 .btn-right{
-	float: right;
-	margin-right: 1em;
+	position: absolute;
+	right: 1%;
+}
+
+.btn-height{
+	position: absolute;
+	top: 90%;
 }
 
 .blanco{
@@ -64,4 +74,111 @@ body{
 
 .rojo-darken{
 	color: #c62828;
+}
+
+.foto{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.rojo{
+	background: red;
+}
+
+.tag{
+	position: relative;
+	top: -6em;
+	background: rgba(47,46,46,0.7);
+	text-align: center;
+}
+
+.tarjeta{
+	padding: 0;
+	margin: 1em 2.5em 0 0;
+	position: relative;
+	left: 1em;
+}
+
+.arriba{
+	margin-top: 2em;
+}
+
+.LugarFecha{
+	height: 30%;
+}
+
+.LugarFechaTitle{
+	position: relative;
+	top: -0.8em;
+	text-align: center;
+	font-size: 22px;
+}
+
+.LugarFechaInformacion{
+	padding: 0 0 0 1em;
+	margin-top: -1em;
+}
+
+.CreadorEvento{
+	position: relative;
+	top: -37em;
+	left: 59.9em;
+}
+
+.CreadorFigure{
+	padding: 0;
+	margin: 0;
+}
+
+.CreadorEvento-h4{
+	position: relative;
+	top: -0.8em;
+	text-align: center;
+	font-size: 22px;
+}
+
+.CreadorEvento-img{
+	width: 64px;
+	height: 64px;
+	margin-left: 1em;
+	position: relative;
+	bottom: .5em;
+}
+
+.CreadorEventoFig{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.CreadorEventoP{
+	margin: 0 0.5em;
+	position: relative;
+	bottom: .5em;
+}
+
+.Descripcion{
+}
+
+.Descripcion-p{
+	position: relative;
+	top: -5em;
+	margin: 0.5em;
+}
+
+.Comentarios{
+	position: relative;
+	top: -11em;
+	left: 1em
+}
+
+.pregunta{
+	position: relative;
+	left: 1em;
+}
+
+.btn-pregunta{
+	position: relative;
+	left: 45em;
+	top: -2.5em;
 }
