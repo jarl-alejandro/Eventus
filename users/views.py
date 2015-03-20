@@ -8,9 +8,17 @@ from django.views.generic import TemplateView
 
 from .forms import UserCreationForm, EmailAuthenticationForm
 from events.mixins import LoginRequired
+from events.models import Evento
 
 class ProfileView(LoginRequired, TemplateView):
 	template_name = "profile.html"
+
+	def get_context_data(self, **kwargs):
+	    context = super(ProfileView, self).get_context_data(**kwargs)
+	    eventos = Evento.objects.filter(creador = self.request.user)
+	    data = { 'eventos':eventos }
+	    context.update(data)
+	    return context
 
 def log_in(request):
 	if request.method == "POST":

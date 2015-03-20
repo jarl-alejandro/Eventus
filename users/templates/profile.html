@@ -2,6 +2,40 @@
 
 
 {% block content %}
-	{{ user }}
-	<img src="{{ user.avatar.url }}" />
+	<div class="profile card col-xs-4">
+		<figure>
+			<img class="my-profile-radius" src="{{ user.avatar.url }}" />
+			<figcaption>
+				<ul>
+					<li>Email => {{ user }}</li>
+					<li>Nombre => {{ user.nombre }}</li>
+					<li>Ciudad => {{ user.ciudad }}</li>
+					<li>Edad => {{ user.edad }}</li>
+				</ul>
+			</figcaption>			
+		</figure>
+	</div>
+		
+	<div class="my-events col-xs-7">
+		{% for evento in eventos %}
+			<article class="card CardEvent blanco be-padding">
+				<h3 class="CardEventTitle rojo-darken">
+					<a href="{% url 'detail' evento.slug %}" class="link">
+						{{ evento.titulo }}
+					</a>
+				</h3>
+				<p class="CardEventoDescripcion">
+					{{ evento.descripcion }}
+				</p>
+				<div class="CardEventoDetalle">
+					<p class="CardEventoCreador">
+						{{ evento.creador }}
+					</p>
+					<p class="CardEventoCiudad">
+						{{ evento.lugar }}
+					</p>
+				</div>
+					</article>
+		    {% endfor %}
+	</div>
 {% endblock content %}

@@ -52,7 +52,7 @@ body{
 }
 
 .btn-height{
-	position: absolute;
+	position: fixed;
 	top: 90%;
 }
 
@@ -156,10 +156,6 @@ body{
 	position: relative;
 	bottom: .5em;
 }
-
-.Descripcion{
-}
-
 .Descripcion-p{
 	position: relative;
 	top: -5em;
@@ -181,4 +177,45 @@ body{
 	position: relative;
 	left: 45em;
 	top: -2.5em;
+}
+
+.CometarioObtenido{
+	position: relative;
+	left: 1em;
+	bottom: 10em;	
+}
+
+.item{
+	position: relative;
+}
+
+.item-img{
+	width: 64px;
+	height: 64px;
+	margin: 0;
+	position: absolute;
+}
+
+.be-padding{
+	padding: 1em;
+}
+
+.item-p{
+	position: relative;
+	left: 5em;
+}
+
+.my-events{
+	position: absolute;
+	top: 8.5%;
+	left: 26%;
+}
+.profile{
+	margin-left: 1em;
+}
+.my-profile-radius{
+	width: 15em;
+	height: 15em;
+	border-radius: 50%;
+
 }

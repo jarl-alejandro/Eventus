@@ -39,9 +39,22 @@
 		</aside>
 	</section>
 	<section class="Comentarios card col-xs-8">
-		<article class="Comentario">
-			<input type="text" class="col-xs-9 pregunta" placeholder="Comenta que te parece este taller :)" />
-			<button class="btn waves-effect waves-light btn-pregunta col-xs-3">Comentar</button>
+		<article>
+			{% csrf_token %}
+			<input data-id="{{ evento.id }}" id="comentario" type="text" 
+				class="col-xs-9 pregunta" placeholder="Comenta que te parece este taller :)" />
+
+			<button id="camentar" class="btn waves-effect waves-light btn-pregunta col-xs-3">Comentar</button>
 		</article>
+	</section>
+	<section class="col-xs-8 CometarioObtenido">
+		<ul id="comentario-ul">
+			{% for comentario in comentarios %}
+				<li id="comentario-li" class="item card">
+					<img class="item-img" src="{{ comentario.user.avatar.url }}" />
+					<p class="item-p">{{ comentario.user }} - {{ comentario.comentario }}</p>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
 {% endblock content %}

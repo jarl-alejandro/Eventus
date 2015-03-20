@@ -1,4 +1,22 @@
-{% block content %}
-	<a href="{% url 'login' %}">login</a>
-	<a href="{% url 'registrate' %}">Registrate</a>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static from staticfiles %}
+	<meta charset="UTF-8">
+	<title>Eventus</title>
+	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<section class="be-height be-red">
+		<div class="be-rigth be-medium">
+			<a class="be-padding be-italic" href="{% url 'login' %}">login</a>
+			<a class="be-padding be-italic" href="{% url 'registrate' %}">Registrate</a>
+		</div>
+		<div class="center no-padding">
+			<h2 class="large pacifico be-white no-margin be-border-bottom">Eventus</h2>
+			<p class="be-bottom be-white be-italic">Encuentra los eventos cerca de tu ciudad.</p>
+		</div>
+	</section>
+</body>
+</html>
